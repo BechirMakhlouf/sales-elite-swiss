@@ -15,10 +15,49 @@
   font-family: Poppins, sans-serif;
   color: #525252
 }
+
 body {
 }
 
 h1,
 h2 {
   font-family: Montserrat, sans-serif;
+}
+
+button {
+  outline: none;
+}
+
+.text-dash {
+  text-decoration: underline dashed;
+}
+
+/* .button-variant-2::before { */
+/*   display: inline-block; */
+/*   content: ""; */
+/*   position: absolute; */
+/*   top: -50%; */
+/*   /* left: 50%; */ 
+/*   z-index: -20 ; */
+/*   width: 70%; */
+/*   height: 100%; */
+/*   /* opacity: 90%; */ 
+/* } */
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 6px;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

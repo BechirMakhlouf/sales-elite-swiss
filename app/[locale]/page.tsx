@@ -8,8 +8,10 @@ import Footer from "@/components/Footer";
 export default function Index() {
   return (
     <>
-      <Header />
-      <HeroSection />
+      <div className="h-screen">
+        <Header />
+        <HeroSection />
+      </div>
       <ServicesSection />
       <AboutUsSesction />
       <ContactUsSection />

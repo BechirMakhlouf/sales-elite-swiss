@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Your Success, Our Expertise.",
 };
 
-export default function LocaleLayout({children, params: {locale}}) {
+export default function LocaleLayout({children, params: {locale}}: any) {
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
  

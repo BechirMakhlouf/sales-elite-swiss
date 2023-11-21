@@ -1,6 +1,19 @@
-import {useTranslations} from 'next-intl';
- 
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
+import AboutUsSesction from "@/components/AboutUsSection";
+import ContactUsSection from "@/components/ContactUsSection";
+import Footer from "@/components/Footer";
+
 export default function Index() {
-  const t = useTranslations('Index');
-  return <h1>{t('title')}</h1>;
+  return (
+    <>
+      <Header />
+      <HeroSection />
+      <ServicesSection />
+      <AboutUsSesction />
+      <ContactUsSection />
+      <Footer />
+    </>
+  );
 }

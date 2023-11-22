@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react";
 
-      // <div className="absolute inline-block text-transparent py-2 px-4 border bg-accent h-[140%] top-[-20%] right-[10%] w-[80%] rounded-md ">
-      //   {props.children}
-      // </div>
+// <div className="absolute inline-block text-transparent py-2 px-4 border bg-accent h-[140%] top-[-20%] right-[10%] w-[80%] rounded-md ">
+//   {props.children}
+// </div>
 const ButtonVariant2 = (props: PropsWithChildren) => {
   return (
-    <div className="inline-block relative w-fit left-18">
+    <div className="select-none inline-block relative w-fit left-18">
       <div className="absolute inline-block text-transparent py-2 px-4 border bg-accent h-[140%] top-[-20%] right-[10%] w-[80%] rounded-md ">
         {props.children}
       </div>

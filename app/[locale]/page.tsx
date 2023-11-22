@@ -8,14 +8,16 @@ import Footer from "@/components/Footer";
 export default function Index() {
   return (
     <>
-      <div className="h-screen">
-        <Header />
-        <HeroSection />
+      <div className="w-screen flex justify-center">
+        <div className="w-full xl:w-[80%] lg:w-[90%]">
+          <Header />
+          <HeroSection />
+          <ServicesSection />
+          <AboutUsSesction />
+          <ContactUsSection />
+          <Footer />
+        </div>
       </div>
-      <ServicesSection />
-      <AboutUsSesction />
-      <ContactUsSection />
-      <Footer />
     </>
   );
 }

@@ -6,7 +6,7 @@ import MenuIcon from "@/public/icons/menu-icon.svg";
 const Header = () => {
   return (
     <>
-      <div className="lg:fixed lg:z-20 left-0  w-full flex justify-center">
+      <div className=" lg:z-20 left-0  w-full flex justify-center">
         <div className=" py-4 px-8  w-full xl:w-[80%] lg:w-[90%] flex justify-between items-center">
           <Image
             alt="sales elite swiss logo with slogan"
@@ -40,6 +40,7 @@ const Header = () => {
               className=""
             />
           </button>
+
         </div>
       </div>
     </>

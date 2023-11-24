@@ -14,7 +14,7 @@ const ContactUsSection = () => {
               {/* full name */}
               <form
                 action=""
-                className="min-w-[32rem] p-6 flex flex-col gap-y-2 border-2 border-secondary border-dashed rounded-md bg-background"
+                className="p-6 flex flex-col gap-y-2 border-2 border-secondary border-dashed rounded-md bg-background"
                 onSubmit={(e) => {
                   e.preventDefault();
                   console.log(e);
@@ -27,7 +27,7 @@ const ContactUsSection = () => {
                     <input
                       name="first-name"
                       type="text"
-                      className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md"
+                      className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
                       required
                     />
                   </div>
@@ -36,7 +36,7 @@ const ContactUsSection = () => {
                     <input
                       name="second-name"
                       type="text"
-                      className="block px-2 h-10 w-full border-2 border-secondary border-dashed rounded-md"
+                      className="block px-2 h-10 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
                       required
                     />
                   </div>
@@ -46,7 +46,7 @@ const ContactUsSection = () => {
                 <input
                   name="email-address"
                   type="email"
-                  className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md"
+                  className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
                   required
                 />
                 {/* Object */}
@@ -54,7 +54,7 @@ const ContactUsSection = () => {
                 <input
                   name="email-object"
                   type="text"
-                  className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md"
+                  className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
                   required
                 />
 
@@ -64,19 +64,20 @@ const ContactUsSection = () => {
                   id=""
                   cols={30}
                   rows={10}
-                  className="block px-2 py-2 w-full border-2 border-secondary border-dashed rounded-md"
+                  className="block px-2 py-2 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
                   required
                 >
                 </textarea>{" "}
                 <input
                   type="submit"
-                  className="inline-block w-fit px-4 py-2 border-2 border-secondary border-dashed rounded-md"
+                  className="cursor-pointer inline-block w-fit px-4 py-2 border-2 border-secondary border-dashed rounded-md active:border-solid"
+                  value="Send"
                 />
               </form>
               <h1 className="text-4xl underline decoration-dashed decoration-secondary">
                 or
               </h1>
-              <div className="p-6 border-2 border-secondary border-dashed rounded-md bg-background">
+              <div className="p-6 border-2 border-secondary border-dashed rounded-md bg-background hover">
                 <h1 className="text-center text-4xl">Call Us</h1>
                 <h1 className="text-4xl text-secondary">+123 457891011</h1>
               </div>

@@ -1,16 +1,29 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import {notFound} from 'next/navigation';
+import "@/app/globals.css";
 
-// Can be imported from a shared config
-const locales = ['en', 'de'];
+import {notFound} from 'next/navigation';
 
 export const metadata: Metadata = {
   title: "Sales Elite Swiss",
   description: "Your Success, Our Expertise.",
 };
 
-export default function LocaleLayout({children, params: {locale}}: any) {
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <html>
+//       <body>{children}</body>
+//     </html>
+//   );
+// }
+ 
+// Can be imported from a shared config
+const locales = ['en', 'de'];
+ 
+export default function LocaleLayout({children, params: {locale}}) {
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
  
@@ -20,17 +33,3 @@ export default function LocaleLayout({children, params: {locale}}: any) {
     </html>
   );
 }
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body>{children}</body>
-//     </html>
-//   );
-// }
-//  
-//  

@@ -1,5 +1,12 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "header": {
+    "aboutUs": "About Us",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us"
+  },
+  "landingPage": {
+    "heroMessage": "Let's Improve Your Sales Strategy",
+    "heroDescription": "Sales Elite Swiss is a Team of sales experts ready to put on decades of knowledge in the field to help you business shine.",
+    "ctaButton": "Book a Free Strategy Call!"
   }
 }

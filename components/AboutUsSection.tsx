@@ -26,28 +26,28 @@ const AboutUsSesction = (
       {aboutUsSectionContent.People.map((people, i) => (
         <div
           key={i}
-          className={`w-screen flex justify-center ${
-            i % 2 ? "bg-alternate-background" : ""
+          className={` h-full w-screen flex justify-center ${
+            i % 2 === 0 ? "bg-alternate-background" : ""
           }`}
         >
           <div className="w-full lg:w-[90%] xl:w-[80%] px-6">
             {i === 0
               ? (
-                <h1 className="my-4 text-5xl underline decoration-dashed decoration-secondary">
+                <h1 className="my-8 text-5xl underline decoration-dashed decoration-secondary">
                   Who Are We?
                 </h1>
               )
               : null}
-            <div className="py-6 w-full h-full flex flex-col  justify-stretch ">
+            <div className="w-full flex flex-col  justify-stretch ">
               {/*here*/}
+
+              {/* text */}
               <div
-                className={` h-full w-full flex ${
-                  i % 2 === 0
-                    ? "flex-col md:flex-row"
-                    : "flex-col-reverse md:flex-row-reverse"
-                } justify-stretch`}
+                className={` py-8 h-full w-full flex  flex-col ${
+                  i % 2 ? "md:flex-row" : "md:flex-row-reverse"
+                } justify-stretch `}
               >
-                <div className="w-full flex flex-col justify-center gap-y-6">
+                <div className="h-fit w-full flex flex-col justify-center self-center gap-y-6">
                   <div className="m-2">
                     <h6 className="font-heading text-secondary text-xl">
                       {people.jobTitle}
@@ -58,26 +58,26 @@ const AboutUsSesction = (
                   </div>
                   <p className="m-2 indent-10">{people.description}</p>
                 </div>
-                <div className="w-full flex justify-center items-center ">
-                  <div className="w-[80%] pt-[6%] flex justify-center">
+
+                {/* image */}
+                <div className=" w-full flex justify-center items-start">
+                  <div className="w-full sm:w-[90%] pt-[2%] flex justify-center items-start">
                     <div className="w-full relative flex">
                       <Image
                         alt={people.picture.alt}
                         src={getSanityImageUrl(people.picture.asset)}
-                        width={700}
-                        height={700}
+                        width={400}
+                        height={400}
                         className="relative z-10 w-[80%] rounded-lg p-4 border-2 border-dashed border-secondary "
                       />
-                      <div className="w-[80%] aspect-square bg-accent absolute right-8 bottom-[18%] rounded-lg -z-0 border border-accent">
+                      <div className="w-[80%] h-[80%] bg-accent absolute right-8 bottom-[18%] rounded-lg -z-0 border border-accent">
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/*here*/}
+              </div>
             </div>
-            {/* section 1 ends*/}
           </div>
         </div>
       ))}

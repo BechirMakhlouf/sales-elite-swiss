@@ -17,12 +17,12 @@ const ContactUsSection = async (
   return (
     <>
       <div className="w-screen flex justify-center bg-alternate-background">
-        <div className="w-full lg:w-[90%] xl:w-[80%] px-6">
+        <div className="w-full lg:w-[90%] xl:w-[80%] md:px-6">
           <div className="py-8">
-            <h1 className="m-4 text-5xl underline decoration-dashed decoration-secondary">
+            <h1 className="m-2 md:m-4 break-words text-4xl md:text-5xl underline decoration-dashed decoration-secondary">
               {contactUsSectionContent.title}
             </h1>
-            <div className="flex flex-col lg:flex-row p-8 justify-center items-center gap-y-8 lg:gap-y-0 lg:gap-x-12">
+            <div className="flex flex-col lg:flex-row p-2 md:p-8 justify-center items-center gap-y-8 lg:gap-y-0 lg:gap-x-12">
               {/* full name */}
               <form
                 action=""

@@ -22,8 +22,12 @@ const Footer = async () => {
               <p>{t("copyright")}</p>
             </div>
             <div className="min-w-[200px] w-1/2 h-full flex flex-col justify-center items-center ">
-              <h1 className="text-primary text-xl">{t("navigation")}</h1>
               <ul className="">
+                <ul>
+                  <h1 className="text-primary text-xl">
+                    {t("navigation")}
+                  </h1>
+                </ul>
                 <li className="cursor-pointer hover:underline">{t("home")}</li>
                 <li className="cursor-pointer hover:underline">
                   {t("aboutUs")}

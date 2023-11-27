@@ -10,12 +10,12 @@ const OffersSection = ({ offers }: { offers: Offer[] }) => {
     <>
       <div className="w-screen flex justify-center">
         <div className="w-full lg:w-[90%] xl:w-[80%] px-6">
-          <div className="py-8 min-h-[32rem] bg-background flex justify-center items-center">
-            <div className="flex flex-col items-center gap-y-8 lg:flex-row lg:gap-x-8">
+          <div className="py-8 min-h-[32rem] bg-background flex justify-center items-start">
+            <div className="flex flex-col items-start gap-y-8 lg:flex-row lg:gap-x-8">
               {offers.map((offer, i) => (
                 <div
                   key={i}
-                  className="flex max-w-lg items-center lg:items-left flex-col gap-y-4"
+                  className="flex max-w-lg lg:w-1/3 items-center justify-start lg:items-left flex-col gap-y-4"
                 >
                   <div className="w-12 h-12 rounded-[50%] border-2 border-secondary border-dashed">
                   </div>

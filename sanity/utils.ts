@@ -11,7 +11,7 @@ const builder = imageUrlBuilder(client);
 
 const getSanityImageUrl = function (source: any, width?: number) {
   width;
-  return builder.image(source).url();
+  return builder.image(source).crop("center").url();
 };
 
 export { getLandingPageContent, getSanityImageUrl };

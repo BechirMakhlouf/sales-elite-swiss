@@ -17,11 +17,11 @@ export default async function Index() {
     <>
       <Header />
       <HeroSection heroSectionContent={landingPageContent.heroSection} />
-      <ServicesSection servicesSectionContent={landingPageContent.ServicesSection}/>,
-      <OffersSection offers={landingPageContent.ServicesSection.offers}/>
-      <AboutUsSesction aboutUsSectionContent={landingPageContent.AboutUsSection}/>,
-      <ContactUsSection contactUsSectionContent={landingPageContent.contactUsSection}/>,
-      <Footer />,
+      <ServicesSection servicesSectionContent={landingPageContent.ServicesSection} />
+      <OffersSection offers={landingPageContent.ServicesSection.offers} />
+      <AboutUsSesction aboutUsSectionContent={landingPageContent.AboutUsSection} />
+      <ContactUsSection contactUsSectionContent={landingPageContent.contactUsSection} />
+      <Footer />
     </>
   );
 }

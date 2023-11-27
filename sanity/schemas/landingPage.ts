@@ -1,5 +1,4 @@
-import { SchemaTypeDefinition } from "sanity";
-
+import { Rule, SchemaTypeDefinition } from "sanity";
 const offer: SchemaTypeDefinition = {
   name: "offer",
   title: "offer",
@@ -27,21 +26,21 @@ const people: SchemaTypeDefinition = {
       options: {
         hotspot: true,
       },
+      fields: [{
+        name: "alt",
+        title: "image description",
+        type: "string",
+      }],
     },
     {
-      "name": "firstName",
-      "title": "First Name",
-      "type": "string",
+      name: "firstName",
+      title: "First Name",
+      type: "string",
     },
     {
-      "name": "middlename",
-      "title": "Middle Name",
-      "type": "string",
-    },
-    {
-      "name": "lastName",
-      "title": "Last Name",
-      "type": "string",
+      name: "lastName",
+      title: "Last Name",
+      type: "string",
     },
     {
       name: "jobTitle",
@@ -58,7 +57,7 @@ const people: SchemaTypeDefinition = {
 const HeroSectionSchema: SchemaTypeDefinition = {
   name: "heroSection",
   title: "Hero Section",
-  type: "document",
+  type: "object",
   fields: [{
     name: "message",
     title: "Main Message",
@@ -75,7 +74,7 @@ const HeroSectionSchema: SchemaTypeDefinition = {
     type: "string",
     validation: (Rule) => Rule.required(),
   }, {
-    name: "heroSectionImage",
+    name: "image",
     title: "Hero Section Image",
     type: "image",
     options: {
@@ -84,13 +83,13 @@ const HeroSectionSchema: SchemaTypeDefinition = {
     fields: [
       {
         name: "alt",
-        title: "alt",
+        title: "Image Description",
         type: "string",
       },
     ],
   }],
 };
-const ServicesSectionSchema: SchemaTypeDefinition = {
+const ServicesSectionSchema = {
   name: "ServicesSection",
   title: "Services Section",
   type: "document",
@@ -99,21 +98,33 @@ const ServicesSectionSchema: SchemaTypeDefinition = {
     title: "Services Section Title",
     type: "string",
   }, {
+    name: "paragraphTitle",
+    title: "Paragraph Title",
+    type: "string",
+  }, {
     name: "servicesDescription",
     title: "Services Section Description",
     type: "text",
+  }, {
+    name: "image",
+    title: "Section Image",
+    type: "image",
+    options: {
+      hotspot: true,
+    },
   }, {
     name: "offers",
     title: "Offers",
     type: "array",
     of: [offer],
+    validation: (Rule: Rule) => Rule.max(3),
   }],
 };
 
-const AboutUsSchema: SchemaTypeDefinition = {
+const AboutUsSchema = {
   name: "AboutUsSection",
   title: "About Us Section",
-  type: "document",
+  type: "object",
   fields: [{
     name: "aboutUsSectionTitle",
     title: "About Us Section Title",
@@ -131,6 +142,10 @@ const ContactUsSchema: SchemaTypeDefinition = {
   title: "Contact Us Section",
   type: "document",
   fields: [{
+    name: "title",
+    title: "Section Title",
+    type: "string",
+  }, {
     name: "phoneNumber",
     title: "Phone Number",
     type: "string",
@@ -141,7 +156,7 @@ const ContactUsSchema: SchemaTypeDefinition = {
   }],
 };
 
-const LandingPage: SchemaTypeDefinition = {
+const LandingPage = {
   name: "landingPage",
   title: "Landing Page",
   type: "document",
@@ -152,12 +167,11 @@ const LandingPage: SchemaTypeDefinition = {
       type: "string",
       options: {
         list: [
-          { title: "EN", value: "English" },
-          { title: "DE", value: "German" },
+          { title: "English", value: "en" },
+          { title: "German", value: "de" },
         ],
       },
     },
-    ,
     HeroSectionSchema,
     ServicesSectionSchema,
     AboutUsSchema,

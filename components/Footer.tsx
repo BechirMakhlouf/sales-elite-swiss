@@ -2,7 +2,12 @@ import React from "react";
 import Image from "next/image";
 import FullLogoWithSlogan from "@/public/Full Logo with slogan.svg";
 
-const Footer = () => {
+import { getLocale, getTranslations } from "next-intl/server";
+
+const Footer = async () => {
+  const t = await getTranslations("footer");
+  const locale = await getLocale();
+
   return (
     <>
       <div className="w-screen flex justify-center">
@@ -14,14 +19,18 @@ const Footer = () => {
                 alt="sales elite swiss full logo with slogan"
                 className="cursor-pointer"
               />
-              <p>Copyright © Sales Elite Swiss</p>
+              <p>{t("copyright")}</p>
             </div>
             <div className="min-w-[200px] w-1/2 h-full flex flex-col justify-center items-center ">
-              <h1 className="text-primary text-xl">Navigation</h1>
+              <h1 className="text-primary text-xl">{t("navigation")}</h1>
               <ul className="">
-                <li className="cursor-pointer hover:underline">Home</li>
-                <li className="cursor-pointer hover:underline">About Us</li>
-                <li className="cursor-pointer hover:underline">Our Services</li>
+                <li className="cursor-pointer hover:underline">{t("home")}</li>
+                <li className="cursor-pointer hover:underline">
+                  {t("aboutUs")}
+                </li>
+                <li className="cursor-pointer hover:underline">
+                  {t("ourServices")}
+                </li>
               </ul>
             </div>
           </div>

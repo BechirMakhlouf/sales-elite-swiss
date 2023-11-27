@@ -1,29 +1,39 @@
-"use client";
 import React from "react";
 
-const ContactUsSection = () => {
+import { getTranslations } from "next-intl/server";
+
+interface ContactUsSectionContent {
+  title: string;
+  phoneNumber: string;
+  contactEmail: string;
+}
+const ContactUsSection = async (
+  { contactUsSectionContent }: {
+    contactUsSectionContent: ContactUsSectionContent;
+  },
+) => {
+  const t = await getTranslations("contactUs");
+
   return (
     <>
       <div className="w-screen flex justify-center bg-alternate-background">
         <div className="w-full lg:w-[90%] xl:w-[80%] px-6">
           <div className="py-8">
             <h1 className="m-4 text-5xl underline decoration-dashed decoration-secondary">
-              Let&apos;s Get In Touch!
+              {contactUsSectionContent.title}
             </h1>
             <div className="flex flex-col lg:flex-row p-8 justify-center items-center gap-y-8 lg:gap-y-0 lg:gap-x-12">
               {/* full name */}
               <form
                 action=""
                 className="p-6 flex flex-col gap-y-2 border-2 border-secondary border-dashed rounded-md bg-background"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  console.log(e);
-                }}
               >
-                <h1 className="text-4xl my-4">Send an email!</h1>
+                <h1 className="text-4xl my-4">{t("emailForm.title")}</h1>
                 <div className="flex flex-col md:flex-row gap-x-4">
                   <div className="w-full">
-                    <label htmlFor="first-name">First Name</label>
+                    <label htmlFor="first-name">
+                      {t("emailForm.fields.firstName")}
+                    </label>
                     <input
                       name="first-name"
                       type="text"
@@ -32,9 +42,11 @@ const ContactUsSection = () => {
                     />
                   </div>
                   <div className="w-full">
-                    <label htmlFor="second-name">Second Name</label>
+                    <label htmlFor="second-name">
+                      {t("emailForm.fields.lastName")}
+                    </label>
                     <input
-                      name="second-name"
+                      name="last-name"
                       type="text"
                       className="block px-2 h-10 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
                       required
@@ -42,7 +54,9 @@ const ContactUsSection = () => {
                   </div>
                 </div>
                 {/* Email */}
-                <label htmlFor="email-address">Email</label>
+                <label htmlFor="email-address">
+                  {t("emailForm.fields.emailAddress")}
+                </label>
                 <input
                   name="email-address"
                   type="email"
@@ -50,15 +64,19 @@ const ContactUsSection = () => {
                   required
                 />
                 {/* Object */}
-                <label htmlFor="email-object">Object</label>
+                <label htmlFor="email-subject">
+                  {t("emailForm.fields.subject")}
+                </label>
                 <input
-                  name="email-object"
+                  name="email-subject"
                   type="text"
                   className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
                   required
                 />
 
-                <label htmlFor="email-message">Message</label>
+                <label htmlFor="email-message">
+                  {t("emailForm.fields.message")}
+                </label>
                 <textarea
                   name="email-message"
                   id=""
@@ -71,15 +89,19 @@ const ContactUsSection = () => {
                 <input
                   type="submit"
                   className="cursor-pointer inline-block w-fit px-4 py-2 border-2 border-secondary border-dashed rounded-md active:border-solid"
-                  value="Send"
+                  value={t("emailForm.fields.sendButton")}
                 />
               </form>
               <h1 className="text-4xl underline decoration-dashed decoration-secondary">
-                or
+                {t("or")}
               </h1>
               <div className="p-6 border-2 border-secondary border-dashed rounded-md bg-background hover">
-                <h1 className="text-center text-4xl">Call Us</h1>
-                <h1 className="text-4xl text-secondary">+123 457891011</h1>
+                <h1 className="text-center text-4xl">
+                  {t("phoneNumberSection.message")}
+                </h1>
+                <h1 className="text-4xl text-secondary">
+                  {contactUsSectionContent.phoneNumber}
+                </h1>
               </div>
             </div>
           </div>

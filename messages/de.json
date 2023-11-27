@@ -1,5 +1,32 @@
 {
   "header": {
-    "aboutUs": "whatever fuck"
+    "aboutUs": "Über uns",
+    "ourServices": "Unsere Dienstleistungen",
+    "contactUs": "Kontaktiere uns"
+  },
+  "contactUs": {
+    "title": "Kommen wir in Kontakt!",
+    "emailForm": {
+      "title": "Sende eine E-Mail",
+      "fields": {
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "emailAddress": "E-Mail",
+        "subject": "Betreff",
+        "message": "Nachricht",
+        "sendButton": "Schicken"
+      }
+    },
+    "or": "oder",
+    "phoneNumberSection": {
+      "message": "Rufe uns an"
+    }
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Zuhause",
+    "aboutUs": "Über uns",
+    "ourServices": "Unsere Dienstleistungen",
+    "copyright": "Copyright © Sales Elite Swiss"
   }
 }

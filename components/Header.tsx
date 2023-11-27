@@ -3,13 +3,11 @@ import FullLogo from "../public/Full Logo.svg";
 import ButtonVariant1 from "./ui/ButtonVariant1";
 import MenuIcon from "@/public/icons/menu-icon.svg";
 
-import { getLocale } from "next-intl/server";
-
-const myLocale = await getLocale();
-
-console.log(myLocale);
+import { getTranslations, getLocale } from "next-intl/server";
 
 const Header = async () => {
+  const t = await getTranslations("header");
+  const locale = await getLocale();
   return (
     <>
       <div className="lg:z-20 left-0  w-full flex justify-center">
@@ -23,16 +21,16 @@ const Header = async () => {
 
           <ul className="lg:flex hidden select-none text-xl justify-around items-center gap-x-8">
             <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
-              <span className="">About Us</span>
+              <span className="">{t("aboutUs")}</span>
             </li>
             <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
-              <span>Our Services</span>
+              <span>{t("ourServices")}</span>
             </li>
             <li className="select-none">
-              <ButtonVariant1>Contact Us</ButtonVariant1>
+              <ButtonVariant1>{t("contactUs")}</ButtonVariant1>
             </li>
             <li className="relative cursor-pointer hover-underline-animation after:bg-accent text-lg">
-              <span>EN v</span>
+              <span>{locale.toUpperCase()} v</span>
             </li>
           </ul>
 

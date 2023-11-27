@@ -4,9 +4,29 @@
     "ourServices": "Our Services",
     "contactUs": "Contact Us"
   },
-  "landingPage": {
-    "heroMessage": "Let's Improve Your Sales Strategy",
-    "heroDescription": "Sales Elite Swiss is a Team of sales experts ready to put on decades of knowledge in the field to help you business shine.",
-    "ctaButton": "Book a Free Strategy Call!"
+  "contactUs": {
+    "title": "Let's Get In Touch!",
+    "emailForm": {
+      "title": "Send An Email",
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "emailAddress": "E-Mail",
+        "subject": "Subject",
+        "message": "Message",
+        "sendButton": "Send"
+      }
+    },
+    "or": "or",
+    "phoneNumberSection": {
+      "message": "Call Us"
+    }
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "ourServices": "Our Services",
+    "copyright": "Copyright © Sales Elite Swiss"
   }
 }

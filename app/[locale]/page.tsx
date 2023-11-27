@@ -6,15 +6,21 @@ import AboutUsSesction from "@/components/AboutUsSection";
 import ContactUsSection from "@/components/ContactUsSection";
 import Footer from "@/components/Footer";
 
-export default function Index() {
+import { getLocale } from "next-intl/server";
+import { getLandingPageContent } from "@/sanity/utils";
+
+export default async function Index() {
+  const landingPageContent = await getLandingPageContent(
+    await getLocale() as "en" | "de",
+  );
   return (
     <>
       <Header />
-      <HeroSection />
-      <ServicesSection />,
-      <OffersSection />,
-      <AboutUsSesction />,
-      <ContactUsSection />,
+      <HeroSection heroSectionContent={landingPageContent.heroSection} />
+      <ServicesSection servicesSectionContent={landingPageContent.ServicesSection}/>,
+      <OffersSection offers={landingPageContent.ServicesSection.offers}/>
+      <AboutUsSesction aboutUsSectionContent={landingPageContent.AboutUsSection}/>,
+      <ContactUsSection contactUsSectionContent={landingPageContent.contactUsSection}/>,
       <Footer />,
     </>
   );

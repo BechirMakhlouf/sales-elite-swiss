@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 import { getSanityImageUrl } from "@/sanity/utils";
+import ImageVariant1 from "./ui/ImageVariant1";
+
 import { Offer } from "./OffersSection";
 
 interface ServicesSectionContent {
@@ -22,7 +24,7 @@ const ServicesSection = (
 ) => {
   return (
     <>
-      <div className="w-screen flex justify-center bg-alternate-background">
+      <div id="services-section" className="w-screen flex justify-center bg-alternate-background">
         <div className="w-full lg:w-[90%] xl:w-[80%] md:px-6">
           <div className="py-4 w-full">
             <h1 className="mx-2 my-4 text-4xl lg:text-5xl underline decoration-dashed decoration-secondary">
@@ -39,21 +41,7 @@ const ServicesSection = (
               </div>
 
               <div className="w-full flex items-center justify-center">
-                <div className="w-full md:w-[80%] pt-[6%] flex justify-center">
-                  <div className="w-full relative flex justify-center">
-                    <Image
-                      alt={servicesSectionContent.image.alt}
-                      src={getSanityImageUrl(
-                        servicesSectionContent.image.asset,
-                      )}
-                      width={700}
-                      height={400}
-                      className="relative z-10 w-[80%] rounded-lg p-4 border-2 border-dashed border-secondary "
-                    />
-                    <div className="w-[80%] aspect-square bg-accent absolute right-0 bottom-[18%] rounded-lg -z-0 border border-accent">
-                    </div>
-                  </div>
-                </div>
+                <ImageVariant1 img={servicesSectionContent.image}/>
               </div>
             </div>
           </div>

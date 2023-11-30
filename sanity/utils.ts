@@ -9,8 +9,7 @@ const getLandingPageContent = async (localeCode: "en" | "de") => {
 
 const builder = imageUrlBuilder(client);
 
-const getSanityImageUrl = function (source: any, width?: number) {
-  width;
+const getSanityImageUrl = function (source: any) {
   return builder.image(source).crop("center").url();
 };
 

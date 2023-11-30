@@ -21,7 +21,8 @@
 background: #f9e2ae;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -49,6 +50,9 @@ button {
 /*   /* opacity: 90%; */ 
 /* } */
 
+.bgg {
+  background-color: red;
+}
 .hover-underline-animation::after {
   content: '';
   position: absolute;
@@ -65,4 +69,8 @@ button {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+#dropDownMenu:hover > #dropDownContent {
+  display: block;
 }

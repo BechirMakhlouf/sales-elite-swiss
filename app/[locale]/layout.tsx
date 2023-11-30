@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 
 import { notFound } from "next/navigation";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Sales Elite Swiss",
@@ -29,7 +30,9 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
 
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

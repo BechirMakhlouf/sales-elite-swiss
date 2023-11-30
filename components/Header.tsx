@@ -2,12 +2,10 @@ import Image from "next/image";
 import FullLogo from "../public/Full Logo.svg";
 import ButtonVariant1 from "./ui/ButtonVariant1";
 import MenuIcon from "@/public/icons/menu-icon.svg";
-
-import { getTranslations, getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import NavBar from "./ui/Navbar";
 
 const Header = async () => {
-  const t = await getTranslations("header");
-  const locale = await getLocale();
   return (
     <>
       <div className="lg:z-20 left-0  w-full flex justify-center">
@@ -18,21 +16,7 @@ const Header = async () => {
             width={240}
             className="cursor-pointer w-52"
           />
-
-          <ul className="lg:flex hidden select-none text-xl justify-around items-center gap-x-8">
-            <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
-              <span className="">{t("aboutUs")}</span>
-            </li>
-            <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
-              <span>{t("ourServices")}</span>
-            </li>
-            <li className="select-none">
-              <ButtonVariant1>{t("contactUs")}</ButtonVariant1>
-            </li>
-            <li className="relative cursor-pointer hover-underline-animation after:bg-accent text-lg">
-              <span>{locale.toUpperCase()} v</span>
-            </li>
-          </ul>
+          <NavBar />
 
           {/* or: */}
 

@@ -1,6 +1,5 @@
 import ButtonVariant2 from "./ui/ButtonVariant2";
-import Image from "next/image";
-import { getSanityImageUrl } from "@/sanity/utils";
+import ImageVariant1 from "@/components/ui/ImageVariant1";
 
 interface HeroSectionContent {
   message: string;
@@ -13,15 +12,13 @@ interface HeroSectionContent {
 }
 
 const HeroSection = (
-  { heroSectionContent }: { heroSectionContent: HeroSectionContent},
+  { heroSectionContent }: { heroSectionContent: HeroSectionContent },
 ) => {
   return (
     <>
       <div className="w-full flex justify-center">
         <div className=" w-full lg:w-[90%] xl:w-[80%] md:px-6">
-
-          <div className=" w-full h-fit gap-y-12 xl:h-screen min-h-[54em] bg-background flex xl:flex-nowrap flex-wrap justify-stretch items-stretch">
-
+          <div className=" w-full h-fit gap-y-12 gap-x-4 xl:h-screen min-h-[54em] bg-background flex xl:flex-nowrap flex-wrap justify-stretch items-stretch">
             <div className="w-full min-h-[60vh] pt-12 xl:w-[50%] h-full flex justify-center items-start md:items-center ">
               <div className="w-full px-6 h-[80%] flex flex-col justify-center items-center xl:pt-16 xl:justify-start gap-y-12">
                 <h1 className=" text-4xl sm:text-5xl md:text-7xl  text-center break-words">
@@ -38,26 +35,9 @@ const HeroSection = (
               </div>
             </div>
 
-            <div className=" xl:p-0 w-full lg:h-full xl:w-[50%] flex justify-center items-center">
-
-              <div className="px-1 w-full sm:w-[90%] flex justify-center pt-[6%] ">
-                <div className=" w-full relative flex justify-center">
-                  <Image
-                    alt={heroSectionContent.image.alt}
-                    src={getSanityImageUrl(
-                      heroSectionContent.image.asset,
-                    )}
-                    width={700}
-                    height={500}
-                    className="relative z-10 w-[80%] rounded-lg p-4 border-2 border-dashed border-secondary "
-                  />
-                  <div className="w-[80%]  aspect-square bg-accent absolute right-0 bottom-[18%] rounded-lg -z-0 border border-accent">
-                  </div>
-                </div>
-              </div>
-
+            <div className="xl:p-0 w-full lg:h-full xl:w-[50%] flex justify-center items-center">
+              <ImageVariant1 img={heroSectionContent.image} />
             </div>
-            
           </div>
         </div>
       </div>

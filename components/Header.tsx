@@ -1,10 +1,8 @@
 import Image from "next/image";
 import FullLogo from "../public/Full Logo.svg";
-import ButtonVariant1 from "./ui/ButtonVariant1";
 import MenuIcon from "@/public/icons/menu-icon.svg";
-import { getLocale, getTranslations } from "next-intl/server";
 import NavBar from "./ui/Navbar";
-
+import MenuSideBar from "./ui/MenuSideBar";
 const Header = async () => {
   return (
     <>
@@ -17,17 +15,9 @@ const Header = async () => {
             className="cursor-pointer w-52"
           />
           <NavBar />
-
-          {/* or: */}
-
-          <button className="lg:hidden p-3 rounded-full pointer-click select-none">
-            <Image
-              alt="menu icon"
-              width={40}
-              src={MenuIcon}
-              className=""
-            />
-          </button>
+          <div className="w-fit h-fit lg:hidden">
+            <MenuSideBar />
+          </div>
         </div>
       </div>
     </>

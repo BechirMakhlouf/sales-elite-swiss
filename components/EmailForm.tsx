@@ -46,7 +46,7 @@ const EmailForm = (
     <>
       <form
         action={handleEmail}
-        className="p-6 flex flex-col gap-y-2 border-2 border-secondary border-dashed hover:border-solid rounded-md bg-background"
+        className="h-full p-6 flex flex-col gap-y-2 border-2 border-secondary border-dashed hover:border-solid rounded-md bg-background"
       >
         <h1 className="text-4xl my-4">{formTranslations.title}</h1>
         <div className="flex flex-col md:flex-row gap-x-4">
@@ -100,7 +100,7 @@ const EmailForm = (
         <textarea
           name="email-message"
           id=""
-          cols={30}
+          cols={20}
           rows={10}
           className="block px-2 py-2 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid "
           required

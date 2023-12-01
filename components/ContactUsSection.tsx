@@ -36,7 +36,9 @@ const ContactUsSection = async (
             </h1>
             <div className=" flex flex-col xl:flex-row p-2 md:p-8 justify-center items-center gap-y-8 xl:gap-y-0 xl:gap-x-12">
               {/* full name */}
-              <EmailForm formTranslations={formTranslations} />
+              <div className="h-[80%] max-h-[800px]">
+                <EmailForm formTranslations={formTranslations} />
+              </div>
               <h1 className="text-4xl underline decoration-dashed decoration-secondary">
                 {t("or")}
               </h1>
@@ -45,7 +47,7 @@ const ContactUsSection = async (
                   {t("phoneNumberSection.message")}
                 </h1>
                 <h1 className="w-full text-3xl break-keep text-secondary text-center">
-                    {contactUsSectionContent.phoneNumber}
+                  {contactUsSectionContent.phoneNumber}
                 </h1>
               </div>
             </div>

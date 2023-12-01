@@ -35,7 +35,7 @@ const HeroSection = (
               </div>
             </div>
 
-            <div className="xl:p-0 w-full lg:h-full xl:w-[50%] flex justify-center items-center">
+            <div className="px-4 xl:p-0 w-full lg:h-full xl:w-[50%] flex justify-center items-center">
               <ImageVariant1 img={heroSectionContent.image} />
             </div>
           </div>

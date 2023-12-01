@@ -57,7 +57,7 @@ const AboutUsSesction = (
                   </div>
 
                   {/* image */}
-                  <div className="w-full h-full">
+                  <div className="px-4 md:px-0 w-full h-full">
                     <ImageVariant1 img={people.picture} />
                   </div>
                 </div>

@@ -34,7 +34,7 @@ const ContactUsSection = async (
             <h1 className="m-2 md:m-4 break-words text-4xl md:text-5xl underline decoration-dashed decoration-secondary">
               {contactUsSectionContent.title}
             </h1>
-            <div className="h-[80%] min-h-[10px]  flex flex-col xl:flex-row p-2 md:p-8 justify-center items-center gap-y-8 xl:gap-y-0 xl:gap-x-12">
+            <div className=" flex flex-col xl:flex-row p-2 md:p-8 justify-center items-center gap-y-8 xl:gap-y-0 xl:gap-x-12">
               {/* full name */}
               <EmailForm formTranslations={formTranslations} />
               <h1 className="text-4xl underline decoration-dashed decoration-secondary">

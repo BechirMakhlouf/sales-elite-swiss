@@ -1,4 +1,3 @@
-import React from "react";
 import ImageVariant1 from "./ui/ImageVariant1";
 
 import { Offer } from "./OffersSection";

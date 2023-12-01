@@ -1,4 +1,5 @@
 import ImageVariant1 from "./ui/ImageVariant1";
+import { getTranslations } from "next-intl/server";
 
 interface People {
   firstName: string;
@@ -14,9 +15,10 @@ interface AboutUsSectionContent {
   aboutUsSectionTitle: string;
   People: People[];
 }
-const AboutUsSesction = (
+const AboutUsSesction = async (
   { aboutUsSectionContent }: { aboutUsSectionContent: AboutUsSectionContent },
 ) => {
+  const t = await getTranslations("aboutUs");
   return (
     <>
       <div id="aboutus-section">
@@ -31,11 +33,11 @@ const AboutUsSesction = (
               {i === 0
                 ? (
                   <h1 className="my-8 text-5xl underline decoration-dashed decoration-secondary">
-                    Who Are We?
+                    {t("title")}
                   </h1>
                 )
                 : null}
-              <div className="w-full flex flex-col  justify-stretch ">
+              <div className="w-full flex flex-col justify-stretch">
                 {/*here*/}
 
                 {/* text */}

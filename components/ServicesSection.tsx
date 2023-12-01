@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-
-import { getSanityImageUrl } from "@/sanity/utils";
 import ImageVariant1 from "./ui/ImageVariant1";
 
 import { Offer } from "./OffersSection";

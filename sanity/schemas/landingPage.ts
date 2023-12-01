@@ -1,4 +1,5 @@
 import { Rule, SchemaTypeDefinition } from "sanity";
+
 const offer: SchemaTypeDefinition = {
   name: "offer",
   title: "offer",

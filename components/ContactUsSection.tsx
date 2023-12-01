@@ -25,7 +25,10 @@ const ContactUsSection = async (
   };
   return (
     <>
-      <div id="contactus-section" className="w-screen flex justify-center bg-alternate-background">
+      <div
+        id="contactus-section"
+        className="h-screen w-screen flex justify-center bg-alternate-background"
+      >
         <div className="w-full lg:w-[90%] xl:w-[80%] md:px-6">
           <div className="py-8">
             <h1 className="m-2 md:m-4 break-words text-4xl md:text-5xl underline decoration-dashed decoration-secondary">

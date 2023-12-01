@@ -4,6 +4,9 @@
     "ourServices": "Unsere Dienstleistungen",
     "contactUs": "Kontaktiere uns"
   },
+  "aboutUs": {
+    "title": "Wer sind wir"
+  },
   "contactUs": {
     "title": "Kommen wir in Kontakt!",
     "emailForm": {

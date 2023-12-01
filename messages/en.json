@@ -4,6 +4,9 @@
     "ourServices": "Our Services",
     "contactUs": "Contact Us"
   },
+  "aboutUs": {
+    "title": "Who Are We?"
+  },
   "contactUs": {
     "title": "Let's Get In Touch!",
     "emailForm": {

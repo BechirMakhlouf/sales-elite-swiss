@@ -1,9 +1,17 @@
 import { NextPage } from "next";
-import Header from "@/components/Header";
-const AboutUsPage: NextPage = () => {
+import { getLandingPageContent } from "@/sanity/utils";
+import { getLocale } from "next-intl/server";
+import AboutUsSection from "@/components/AboutUsSection";
+
+const AboutUsPage: NextPage = async () => {
+  const landingPageContent = await getLandingPageContent(
+    await getLocale() as "en" | "de",
+  );
+  const aboutUsSectionContent = landingPageContent.AboutUsSection;
+
   return (
     <>
-      <div>AboutUsPage</div>
+      <AboutUsSection aboutUsSectionContent={aboutUsSectionContent} />
     </>
   );
 };

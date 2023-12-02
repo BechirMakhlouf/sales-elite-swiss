@@ -46,7 +46,7 @@ const NavBar = async () => {
 
             <ul
               id="dropDownContent"
-              className="absolute bg-transparent hidden z-20 border border-dashed border-secondary rounded-md w-14 pt-2 pl-1"
+              className="absolute bg-white hidden z-20 border border-dashed border-secondary rounded-md w-14 pt-2 pl-1"
             >
               <li>
                 <Link href="/en" locale="en" className="hover:underline">EN</Link>

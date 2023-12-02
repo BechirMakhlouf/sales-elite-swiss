@@ -8,10 +8,6 @@ const ContactUsPage: NextPage = async () => {
   const landingPageContent = await getLandingPageContent(
     await getLocale() as "en" | "de",
   );
-  const heroSectionContent = landingPageContent.heroSection;
-  const servicesSectionContent = landingPageContent.ServicesSection;
-  const offers = landingPageContent.ServicesSection.offers;
-  const aboutUsSectionContent = landingPageContent.AboutUsSection;
   const contactUsSectionContent = landingPageContent.contactUsSection;
 
   return (

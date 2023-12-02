@@ -15,7 +15,7 @@ interface AboutUsSectionContent {
   aboutUsSectionTitle: string;
   People: People[];
 }
-const AboutUsSesction = async (
+const AboutUsSection = async (
   { aboutUsSectionContent }: { aboutUsSectionContent: AboutUsSectionContent },
 ) => {
   const t = await getTranslations("aboutUs");
@@ -72,4 +72,4 @@ const AboutUsSesction = async (
   );
 };
 
-export default AboutUsSesction;
+export default AboutUsSection;

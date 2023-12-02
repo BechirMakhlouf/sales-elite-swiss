@@ -3,7 +3,7 @@ import "@/app/globals.css";
 
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
-
+import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Sales Elite Swiss",
   description: "Your Success, Our Expertise.",
@@ -31,7 +31,9 @@ export default function LocaleLayout({ children, params: { locale } }: any) {
   return (
     <html lang={locale}>
       <body>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

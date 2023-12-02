@@ -101,7 +101,7 @@ const EmailForm = (
           name="email-message"
           id=""
           cols={20}
-          rows={10}
+          rows={7}
           className="block px-2 py-2 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid "
           required
         >
@@ -109,7 +109,6 @@ const EmailForm = (
         <input
           type="submit"
           className="cursor-pointer inline-block w-fit px-4 py-2 border-2 border-secondary border-dashed rounded-md active:border-solid "
-          maxLength={50}
           value={formTranslations.sendButton}
         />
       </form>

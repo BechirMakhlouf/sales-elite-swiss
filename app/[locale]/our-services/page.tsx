@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 const OurServices: NextPage = () => {
   return (
     <>
-      <Header />
       <div>services</div>
     </>
   );

@@ -20,13 +20,11 @@ export default async function Index() {
   const contactUsSectionContent = landingPageContent.contactUsSection;
   return (
     <>
-      <Header />
       <HeroSection heroSectionContent={heroSectionContent} />
       <ServicesSection servicesSectionContent={servicesSectionContent} />
       <OffersSection offers={offers} />
       <AboutUsSesction aboutUsSectionContent={aboutUsSectionContent} />
       <ContactUsSection contactUsSectionContent={contactUsSectionContent} />
-      <Footer />
     </>
   );
 }

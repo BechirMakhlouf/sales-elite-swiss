@@ -16,7 +16,6 @@ const ContactUsPage: NextPage = async () => {
 
   return (
     <>
-      <Header />
       <ContactUsSection contactUsSectionContent={contactUsSectionContent} />
     </>
   );

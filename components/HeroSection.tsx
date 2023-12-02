@@ -38,7 +38,7 @@ const HeroSection = (
               </div>
             </div>
 
-            <div className="self-center px-4 xl:p-0 w-1/2 h-full flex justify-center items-center">
+            <div className="self-center px-4 xl:p-0 w-full md:w-1/2 h-full flex justify-center items-center">
               <ImageVariant1 img={heroSectionContent.image} />
             </div>
           </div>

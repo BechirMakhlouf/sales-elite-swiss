@@ -113,8 +113,7 @@ const ServicesSectionSchema = {
     options: {
       hotspot: true,
     },
-  },
-    ,{
+  }, {
     name: "offers",
     title: "Offers",
     type: "array",

@@ -102,7 +102,7 @@ const EmailForm = (
           id=""
           cols={20}
           rows={7}
-          className="block px-2 py-2 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid "
+          className="max-h-72 block px-2 py-2 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid "
           required
         >
         </textarea>{" "}

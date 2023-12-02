@@ -13,14 +13,19 @@ export default async function Index() {
   const landingPageContent = await getLandingPageContent(
     await getLocale() as "en" | "de",
   );
+  const heroSectionContent = landingPageContent.heroSection;
+  const servicesSectionContent = landingPageContent.ServicesSection;
+  const offers = landingPageContent.ServicesSection.offers;
+  const aboutUsSectionContent = landingPageContent.AboutUsSection;
+  const contactUsSectionContent = landingPageContent.contactUsSection;
   return (
     <>
       <Header />
-      <HeroSection heroSectionContent={landingPageContent.heroSection} />
-      <ServicesSection servicesSectionContent={landingPageContent.ServicesSection} />
-      <OffersSection offers={landingPageContent.ServicesSection.offers} />
-      <AboutUsSesction aboutUsSectionContent={landingPageContent.AboutUsSection} />
-      <ContactUsSection contactUsSectionContent={landingPageContent.contactUsSection} />
+      <HeroSection heroSectionContent={heroSectionContent} />
+      <ServicesSection servicesSectionContent={servicesSectionContent} />
+      <OffersSection offers={offers} />
+      <AboutUsSesction aboutUsSectionContent={aboutUsSectionContent} />
+      <ContactUsSection contactUsSectionContent={contactUsSectionContent} />
       <Footer />
     </>
   );

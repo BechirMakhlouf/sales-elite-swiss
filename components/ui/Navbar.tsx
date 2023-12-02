@@ -2,25 +2,32 @@ import ButtonVariant1 from "./ButtonVariant1";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import DropDownMenuVariant1 from "./DropDownMenuVariant1";
+import Head from 'next/head';
+
 const NavBar = async () => {
+
   const t = await getTranslations("header");
   const locale = await getLocale();
-
   return (
     <>
       <ul className="lg:flex hidden select-none text-xl justify-around items-center gap-x-8">
         <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
-          <Link href="#aboutus-section">
+          <Link href="/">
+            <span className="">{t("home")}</span>
+          </Link>
+        </li>
+        <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
+          <Link href={`/${locale}/about-us`}>
             <span className="">{t("aboutUs")}</span>
           </Link>
         </li>
         <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
-          <Link href="#services-section">
+          <Link href={`/${locale}/our-services`}>
             <span>{t("ourServices")}</span>
           </Link>
         </li>
         <li className="select-none">
-          <Link href="#contactus-section">
+          <Link href={`/${locale}/contact-us`}>
             <ButtonVariant1>
               {t("contactUs")}
             </ButtonVariant1>
@@ -36,15 +43,16 @@ const NavBar = async () => {
             >
               {locale.toUpperCase()} v
             </div>
+
             <ul
               id="dropDownContent"
               className="absolute bg-transparent hidden z-20 border border-dashed border-secondary rounded-md w-14 pt-2 pl-1"
             >
               <li>
-                <Link href="/en" className="hover:underline">EN</Link>
+                <Link href="/en" locale="en" className="hover:underline">EN</Link>
               </li>
               <li>
-                <Link href="/de" className="hover:underline">DE</Link>
+                <Link href="/de" locale="de" className="hover:underline">DE</Link>
               </li>
             </ul>
           </div>

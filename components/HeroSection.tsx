@@ -24,7 +24,7 @@ const HeroSection = (
 
               <div className="w-full px-6 flex flex-col justify-center items-center xl:pt-16 xl:justify-start gap-y-12">
 
-                <h1 className="text-3xl text-center break-words">
+                <h1 className="text-3xl md:text-4xl xl:text-5xl text-center break-words">
                   {heroSectionContent.message}
                 </h1>
                 <p className="px-2 md:indent-11 text-md text-center xl:text-start">

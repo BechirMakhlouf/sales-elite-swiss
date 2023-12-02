@@ -4,7 +4,7 @@ import { getLandingPageContent } from "@/sanity/utils";
 import { getLocale } from "next-intl/server";
 import ContactUsSection from "@/components/ContactUsSection";
 
-const ContactUsPage: NextPage = async (context: NextPageContext) => {
+const ContactUsPage: NextPage = async () => {
   const landingPageContent = await getLandingPageContent(
     await getLocale() as "en" | "de",
   );

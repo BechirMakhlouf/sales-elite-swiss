@@ -46,7 +46,7 @@ const MenuSideBar = () => {
                   onClick={() => setIsOpen(() => false)}
                   className="border-b-2 border-dashed border-secondary text-4xl my-4 pl-4 pb-4 text-heading"
                 >
-                  <Link href={`/`}>Home</Link>
+                  <Link href={`/${locale}/`}>Home</Link>
                 </li>
                 <li
                   onClick={() => setIsOpen(() => false)}

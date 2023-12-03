@@ -2,7 +2,6 @@ import ButtonVariant1 from "./ButtonVariant1";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import DropDownMenuVariant1 from "./DropDownMenuVariant1";
-import Head from 'next/head';
 
 const NavBar = async () => {
 
@@ -12,7 +11,7 @@ const NavBar = async () => {
     <>
       <ul className="lg:flex hidden select-none text-xl justify-around items-center gap-x-8">
         <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
-          <Link href="/">
+          <Link href={`/${locale}/`}>
             <span className="">{t("home")}</span>
           </Link>
         </li>

@@ -26,7 +26,7 @@ const Footer = async () => {
                   {t("navigation")}
                 </h1>
                 <li className="cursor-pointer hover:underline">
-                  <Link href="/">{t("home")}</Link>
+                  <Link href={`/${locale}/`}>{t("home")}</Link>
                 </li>
                 <li className="cursor-pointer hover:underline">
                   <Link href={`/${locale}/about-us`}>{t("aboutUs")}</Link>

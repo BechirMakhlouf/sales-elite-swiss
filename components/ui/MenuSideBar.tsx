@@ -31,12 +31,14 @@ const MenuSideBar = () => {
               transition={{ type: "just" }}
               className="w-screen h-screen fixed bg-alternate-background top-0 left-0 z-30"
             >
-              <div className="w-full flex justify-end border ">
+              <div className="w-full flex justify-end border pr-4 py-4">
                 <button
                   onClick={() => setIsOpen(() => false)}
-                  className="text-4xl p-4"
+                  className="text-3xl w-12 h-12 text-center rounded-[50%] border-2 border-secondary border-dashed flex jusity-center items-center"
                 >
-                  X
+                  <div className="w-full text-secondary">
+                    X
+                  </div>
                 </button>
               </div>
               <ul>
@@ -44,7 +46,7 @@ const MenuSideBar = () => {
                   onClick={() => setIsOpen(() => false)}
                   className="border-b-2 border-dashed border-secondary text-4xl my-4 pl-4 pb-4 text-heading"
                 >
-                  <Link href={`/${locale}`}>Home</Link>
+                  <Link href={`/`}>Home</Link>
                 </li>
                 <li
                   onClick={() => setIsOpen(() => false)}

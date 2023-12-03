@@ -94,32 +94,50 @@ const ServicesSectionSchema = {
   name: "ServicesSection",
   title: "Services Section",
   type: "document",
-  fields: [{
-    name: "servicesSectionTitle",
-    title: "Services Section Title",
-    type: "string",
-  }, {
-    name: "paragraphTitle",
-    title: "Paragraph Title",
-    type: "string",
-  }, {
-    name: "servicesDescription",
-    title: "Services Section Description",
-    type: "text",
-  }, {
-    name: "image",
-    title: "Section Image",
-    type: "image",
-    options: {
-      hotspot: true,
+  fields: [
+    {
+      name: "servicesSectionTitle",
+      title: "Services Section Title",
+      type: "string",
     },
-  }, {
-    name: "offers",
-    title: "Offers",
-    type: "array",
-    of: [offer],
-    validation: (Rule: Rule) => Rule.max(3),
-  }],
+    {
+      name: "paragraphTitle",
+      title: "Paragraph Title",
+      type: "string",
+    },
+    {
+      name: "servicesDescription",
+      title: "Services Section Description",
+      type: "text",
+    },
+    {
+      name: "image",
+      title: "Section Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "offersSection",
+      title: "Offers Section",
+      type: "document",
+      fields: [
+        {
+          name: "title",
+          title: "Section Title",
+          type: "string",
+        },
+      ],
+    },
+    {
+      name: "offers",
+      title: "Offers",
+      type: "array",
+      of: [offer],
+      validation: (Rule: Rule) => Rule.max(3),
+    },
+  ],
 };
 
 const AboutUsSchema = {

@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import OffersSection from "@/components/OffersSection";
+import OffersSection, { Offer, OffersSectionContent } from "@/components/OffersSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import ContactUsSection from "@/components/ContactUsSection";
 
@@ -13,14 +13,17 @@ export default async function Index() {
   );
   const heroSectionContent = landingPageContent.heroSection;
   const servicesSectionContent = landingPageContent.ServicesSection;
-  const offers = landingPageContent.ServicesSection.offers;
+  const offersSectionContent: OffersSectionContent = {
+    title: landingPageContent.ServicesSection.offersSection.title as string,
+    offers: landingPageContent.ServicesSection.offers as Offer[],
+  };
   const aboutUsSectionContent = landingPageContent.AboutUsSection;
   const contactUsSectionContent = landingPageContent.contactUsSection;
   return (
     <>
       <HeroSection heroSectionContent={heroSectionContent} />
       <ServicesSection servicesSectionContent={servicesSectionContent} />
-      <OffersSection offers={offers} />
+      <OffersSection offersSectionContent={offersSectionContent}/>
       <AboutUsSection aboutUsSectionContent={aboutUsSectionContent} />
       <ContactUsSection contactUsSectionContent={contactUsSectionContent} />
     </>

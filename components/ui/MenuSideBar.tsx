@@ -5,9 +5,11 @@ import MenuIcon from "@/public/icons/menu-icon.svg";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-
+import { useLocale } from "next-intl";
 const MenuSideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const locale = useLocale();
+
   return (
     <>
       <button className="p-3 rounded-full pointer-click select-none">
@@ -42,7 +44,7 @@ const MenuSideBar = () => {
                   onClick={() => setIsOpen(() => false)}
                   className="border-b-2 border-dashed border-secondary text-4xl my-4 pl-4 pb-4 text-heading"
                 >
-                  <Link href="/">Home</Link>
+                  <Link href={`/${locale}`}>Home</Link>
                 </li>
                 <li
                   onClick={() => setIsOpen(() => false)}
@@ -50,7 +52,7 @@ const MenuSideBar = () => {
                 >
                   <Link
                     onClick={() => setIsOpen(() => false)}
-                    href="/#services-section"
+                    href={`/${locale}/our-services`}
                   >
                     Our Services
                   </Link>
@@ -58,13 +60,12 @@ const MenuSideBar = () => {
                 <li className="border-b-2 border-dashed border-secondary text-4xl my-4 pl-4 pb-4 text-heading">
                   <Link
                     onClick={() => setIsOpen(() => false)}
-                    href="/#contactus-section"
+                    href={`/${locale}/contact-us`}
                   >
                     Contact Us
                   </Link>
                 </li>
                 <li>
-                    
                 </li>
               </ul>
             </motion.div>

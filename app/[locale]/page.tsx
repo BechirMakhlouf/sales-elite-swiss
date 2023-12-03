@@ -1,10 +1,8 @@
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import OffersSection from "@/components/OffersSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import ContactUsSection from "@/components/ContactUsSection";
-import Footer from "@/components/Footer";
 
 import { getLocale } from "next-intl/server";
 import { getLandingPageContent } from "@/sanity/utils";

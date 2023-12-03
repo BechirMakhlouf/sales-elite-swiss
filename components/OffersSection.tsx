@@ -26,7 +26,7 @@ const OffersSection = ({ offers }: { offers: Offer[] }) => {
                     y: 0,
                     opacity: 1,
                     transition: {
-                      delay: 0.5,
+                      delay: 0.3,
                     },
                   }}
                   viewport={{

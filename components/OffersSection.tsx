@@ -20,8 +20,8 @@ const OffersSection = (
     <>
       <div className="w-screen flex justify-center">
         <div className="w-full lg:w-[90%] xl:w-[80%] px-6">
-          <h1 className="text-center my-8 text-5xl underline decoration-dashed decoration-secondary">
-            {title}!
+          <h1 className="text-center my-8 text-4xl md:text-5xl  underline decoration-dashed decoration-secondary">
+            {title}
           </h1>
 
           <div className="py-8 min-h-[32rem] bg-background flex justify-center items-start">

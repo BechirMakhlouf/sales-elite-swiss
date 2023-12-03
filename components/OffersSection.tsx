@@ -28,24 +28,15 @@ const OffersSection = (
             <div className="flex flex-col items-start gap-y-8 lg:flex-row lg:gap-x-8">
               {offers.map((offer, i) => (
                 <motion.div
-                  initial={{
-                    y: 100,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    y: 0,
-                    opacity: 1,
-                    transition: {
-                      delay: 0.3,
-                    },
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1, transition: { delay: 0.3 } }}
+                  viewport={{ once: true }}
                   key={i}
                   className="offer flex max-w-lg lg:w-1/3 items-center justify-start lg:items-left flex-col gap-y-4"
                 >
-                  <div className="w-12 h-12 rounded-[50%] border-2 border-secondary border-dashed">
+                  <div className="w-12 h-12 p-2 rounded-[50%] border-2 border-secondary border-dashed">
+                    <div className="rounded-[50%] w-full h-full bg-accent">
+                    </div>
                   </div>
                   <h2 className="text-3xl">{offer.offerTitle}</h2>
                   <p className="indent-6 break-all">{offer.offerDescription}</p>

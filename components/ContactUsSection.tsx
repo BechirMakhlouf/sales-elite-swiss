@@ -38,7 +38,7 @@ const ContactUsSection = async (
               <div className="h-[80%] max-h-[800px]">
                 <EmailForm formTranslations={formTranslations} />
               </div>
-              <h1 className="text-4xl underline decoration-dashed decoration-secondary">
+              <h1 className="text-4xl underline decoration-secondary">
                 {t("or")}
               </h1>
               <div className="p-6 border-2 border-secondary rounded-md bg-background hover:border-solid transition-all">

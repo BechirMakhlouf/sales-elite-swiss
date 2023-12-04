@@ -9,7 +9,7 @@ const NavBar = async () => {
   const locale = await getLocale();
   return (
     <>
-      <ul className="lg:flex hidden select-none text-xl justify-around items-center gap-x-8">
+      <ul className="lg:flex hidden select-none text-lg justify-around items-center gap-x-8">
         <li className="relative cursor-pointer hover-underline-animation after:bg-accent">
           <Link href={`/${locale}/`}>
             <span className="">{t("home")}</span>
@@ -45,7 +45,7 @@ const NavBar = async () => {
 
             <ul
               id="dropDownContent"
-              className="absolute bg-white hidden z-20 border border-dashed border-secondary rounded-md w-14 pt-2 pl-1"
+              className="absolute bg-white hidden z-20 border border-secondary rounded-md w-14 pt-2 pl-1"
             >
               <li>
                 <Link href="/en" locale="en" className="hover:underline">EN</Link>

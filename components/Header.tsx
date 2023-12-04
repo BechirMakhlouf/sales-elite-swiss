@@ -4,7 +4,6 @@ import MenuIcon from "@/public/icons/menu-icon.svg";
 import NavBar from "./ui/Navbar";
 import MenuSideBar from "./ui/MenuSideBar";
 import Link from "next/link";
-
 const Header = async () => {
   return (
     <>

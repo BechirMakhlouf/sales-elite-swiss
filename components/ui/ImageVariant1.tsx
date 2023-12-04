@@ -72,7 +72,7 @@ const ImageVariant1 = ({ img }: { img: Img }) => {
               src={getSanityImageUrl(img.asset)}
               width={1E9}
               height={1E9}
-              className="w-[80%] h-fit top-6 z-10 rounded-lg p-[2%] border-2 border-dashed border-secondary"
+              className="w-[80%] h-fit top-6 z-10 rounded-lg border-solid border-secondary"
             />
           </motion.div>
           <motion.div

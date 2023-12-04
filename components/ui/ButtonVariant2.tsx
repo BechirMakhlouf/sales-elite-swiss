@@ -42,7 +42,7 @@ const ButtonVariant2 = (props: PropsWithChildren) => {
           });
         }}
         className="inline-block relative z-10 bg-transparent button-variant-2 w-fit py-2 px-4 text-primary rounded-md 
-      border-secondary border-dashed border-2"
+      border-secondary border-solid border-2"
       >
         {props.children}
       </motion.button>

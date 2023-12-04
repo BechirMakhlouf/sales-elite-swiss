@@ -1,3 +1,4 @@
+import HeadingVariant1 from "./ui/HeadingVariant1";
 import ImageVariant1 from "./ui/ImageVariant1";
 import { getTranslations } from "next-intl/server";
 
@@ -32,9 +33,7 @@ const AboutUsSection = async (
             <div className="w-full lg:w-[90%] xl:w-[80%] px-6">
               {i === 0
                 ? (
-                  <h1 className="my-8 text-5xl underline decoration-dashed decoration-secondary">
-                    {t("title")}
-                  </h1>
+                  <HeadingVariant1 headingText={t("title")} />
                 )
                 : null}
               <div className="w-full flex flex-col justify-stretch">

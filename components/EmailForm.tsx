@@ -46,7 +46,7 @@ const EmailForm = (
     <>
       <form
         action={handleEmail}
-        className="h-full p-6 flex flex-col gap-y-2 border-2 border-secondary border-dashed hover:border-solid rounded-md bg-background"
+        className="h-full p-6 flex flex-col gap-y-2 border-2 border-secondary   rounded-md bg-background"
       >
         <h1 className="text-4xl my-4">{formTranslations.title}</h1>
         <div className="flex flex-col md:flex-row gap-x-4">
@@ -57,7 +57,7 @@ const EmailForm = (
             <input
               name="first-name"
               type="text"
-              className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
+              className="block px-2 w-full h-10 border-2 border-secondary  rounded-md focus:outline-none focus:border-solid"
               required
             />
           </div>
@@ -68,7 +68,7 @@ const EmailForm = (
             <input
               name="last-name"
               type="text"
-              className="block px-2 h-10 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
+              className="block px-2 h-10 w-full border-2 border-secondary  rounded-md focus:outline-none focus:border-solid"
               required
             />
           </div>
@@ -80,7 +80,7 @@ const EmailForm = (
         <input
           name="email-address"
           type="email"
-          className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
+          className="block px-2 w-full h-10 border-2 border-secondary  rounded-md focus:outline-none focus:border-solid"
           required
         />
         {/* Object */}
@@ -90,7 +90,7 @@ const EmailForm = (
         <input
           name="email-subject"
           type="text"
-          className="block px-2 w-full h-10 border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid"
+          className="block px-2 w-full h-10 border-2 border-secondary  rounded-md focus:outline-none focus:border-solid"
           required
         />
 
@@ -102,13 +102,13 @@ const EmailForm = (
           id=""
           cols={20}
           rows={7}
-          className="max-h-72 block px-2 py-2 w-full border-2 border-secondary border-dashed rounded-md focus:outline-none focus:border-solid "
+          className="max-h-72 block px-2 py-2 w-full border-2 border-secondary  rounded-md focus:outline-none focus:border-solid "
           required
         >
         </textarea>{" "}
         <input
           type="submit"
-          className="cursor-pointer inline-block w-fit px-4 py-2 border-2 border-secondary border-dashed rounded-md active:border-solid "
+          className="cursor-pointer inline-block w-fit px-4 py-2 border-2 border-secondary  rounded-md active:border-solid "
           value={formTranslations.sendButton}
         />
       </form>

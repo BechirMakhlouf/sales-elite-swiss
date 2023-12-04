@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import HeadingVariant1 from "./ui/HeadingVariant1";
 export interface Offer {
   sectionTitle: string;
   offerTitle: string;
@@ -20,10 +20,7 @@ const OffersSection = (
     <>
       <div className="w-screen flex justify-center">
         <div className="w-full lg:w-[90%] xl:w-[80%] px-6">
-          <h1 className="text-center my-8 text-4xl md:text-5xl  underline decoration-dashed decoration-secondary">
-            {title}
-          </h1>
-
+          <HeadingVariant1 headingText={title}/>
           <div className="py-8 min-h-[32rem] bg-background flex justify-center items-start">
             <div className="flex flex-col items-start gap-y-8 lg:flex-row lg:gap-x-8">
               {offers.map((offer, i) => (
@@ -34,7 +31,7 @@ const OffersSection = (
                   key={i}
                   className="offer flex max-w-lg lg:w-1/3 items-center justify-start lg:items-left flex-col gap-y-4"
                 >
-                  <div className="w-12 h-12 p-2 rounded-[50%] border-2 border-secondary border-dashed">
+                  <div className="w-12 h-12 p-2 rounded-[50%] border-2 border-secondary ">
                     <div className="rounded-[50%] w-full h-full bg-accent">
                     </div>
                   </div>

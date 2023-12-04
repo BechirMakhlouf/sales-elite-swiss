@@ -36,7 +36,7 @@ const OffersSection = (
                     </div>
                   </div>
                   <h2 className="text-3xl">{offer.offerTitle}</h2>
-                  <p className="indent-6 break-all">{offer.offerDescription}</p>
+                  <p className="indent-6">{offer.offerDescription}</p>
                 </motion.div>
               ))}
             </div>

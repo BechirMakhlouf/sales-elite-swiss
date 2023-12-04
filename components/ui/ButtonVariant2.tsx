@@ -1,6 +1,7 @@
 "use client";
 
 import { PropsWithChildren } from "react";
+import Link from "next/link";
 import { motion, useAnimate } from "framer-motion";
 
 const ButtonVariant2 = (props: PropsWithChildren) => {
@@ -44,7 +45,10 @@ const ButtonVariant2 = (props: PropsWithChildren) => {
         className="inline-block relative z-10 bg-transparent button-variant-2 w-fit py-2 px-4 text-primary rounded-md 
       border-secondary border-solid border-2"
       >
+        <Link href={`https://calendly.com/maxie-millions/kennenlern-gesprach?month=2023-12`} target="_blank">
+
         {props.children}
+        </Link>
       </motion.button>
     </div>
   );
